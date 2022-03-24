@@ -10,10 +10,6 @@ are a bit more complicated and less vulnerable than this one.
 """
 
 ### INPUT - DO NOT TOUCH ###
-retrievedHash = int(input())
-### END INPUT ###
-
-### INPUT - DO NOT TOUCH ###
 retrievedEncryptedPassword = int(input())
 ### END INPUT ###
 
@@ -72,8 +68,18 @@ def correctUpToNDigits(givenEncrypted: int, guess: str, n: int) -> bool:
 
 
 def crack(givenHash):
-    # TODO
-    pass
+    preliminary_password: str = "0"
+    length_check : int = 0
+
+    while not (correctLength(givenHash, preliminary_password) and correctUpToNDigits(givenHash, preliminary_password, len(preliminary_password))):
+        if not correctLength(givenHash, preliminary_password):
+            preliminary_password = "0" + preliminary_password
+        elif not correctUpToNDigits(givenHash, preliminary_password, length_check+1):
+            preliminary_password = preliminary_password[:length_check] + str(int(preliminary_password[length_check]) + 1) + preliminary_password[length_check+1:]
+        elif not length_check == len(preliminary_password):
+            length_check += 1 
+    
+    return preliminary_password
 
 
 ### EXAMPLE INPUT - YOU MAY COPY THIS LINE INTO YOUR TERMINAL ###

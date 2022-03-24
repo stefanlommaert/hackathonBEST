@@ -1,0 +1,47 @@
+[
+ {
+ "name": "sandwich club ham",
+ "topping": ["ham", "lettuce"],
+ "price": 4
+ },
+ {
+ "name": "sandwich club cheese",
+ "topping": ["cheese", "lettuce", "tomato"],
+ "price": 2.8
+ },
+ {
+ "name": "sandwich club americain",
+ "topping": ["americain", "tomato"],
+ "price": 5
+ },
+ {
+ "name": "sandwich tomato mozzarella",
+ "topping": ["mozzarella", "pesto", "tomato"],
+ "price": 5
+ },
+ {
+ "name": "sandwich italiano",
+ "topping": ["chicken", "lettuce"],
+ "price": 4.6
+ },
+ {
+ "name": "sandwich crab salad",
+ "topping": ["crab salad", "lettuce"],
+ "price": 3.6
+ },
+ {
+ "name": "burger chicken curry",
+ "topping": ["chicken curry", "lettuce"],
+ "price": 2.2
+ },
+ {
+ "name": "veggie burger",
+ "topping": ["veggie", "tomato", "rucola"],
+ "price": 4.6
+ },
+ {
+ "name": "wrap salmon",
+ "topping": ["salmon", "herb cheese"],
+ "price": 3.9
+ }
+]

@@ -10,8 +10,16 @@ text = eval(input())
 ### END INPUT
 
 def decrypt(text):
-    # TODO
-    pass 
+    decode = [1, 16, 16, 12, 5]
+    decoded_string = ""
+
+    for i in text:
+        if i == " ":
+            decoded_string += " "
+            continue
+
+        
+
 
 ### OUTPUT - DO NOT TOUCH
 print(decrypt(text))

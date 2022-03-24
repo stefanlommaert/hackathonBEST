@@ -1,3 +1,5 @@
+import json
+
 ### OBJECTIVE
 """
 Tambeur is the delivery service for sandwiches we use at Twipe.
@@ -28,8 +30,25 @@ input_tambeur = eval(input())
 ### END INPUT ###
 
 def get_combination():
-    # TODO
-    pass
+    dictionary = json.loads(input_tambeur)
+    
+    output_names = {}
+
+    while len(input_names) > 0:
+        curr_name = input_names[0]
+
+        for sandwich in dictionary:
+            if curr_name == "Stijn":
+                if "tomatos" in sandwich["topping"] or "chicken" in sandwich["topping"]:
+                    continue
+                else:
+                    output_names["Stijn"] = dictionary["name"]
+                    break
+            
+    return output_names
+
+
+
 
 ### OUTPUT - DO NOT TOUCH
 print(get_combination())

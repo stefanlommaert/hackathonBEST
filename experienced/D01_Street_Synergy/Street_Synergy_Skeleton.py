@@ -18,9 +18,19 @@ size = eval(input())
 ### END INPUT ###
 
 
-def lattice(size: tuple) -> int:
-    # TODO
-    pass
+def lattice(size):
+    # return goFromTo((0,0), size)
+    if size == (0,0):
+        return 1
+    
+    if size[0] > 0:
+        if size[1] > 0:
+            return lattice((size[0]-1, size[1])) + lattice((size[0], size[1]-1))
+        else:
+            return lattice((size[0]-1, size[1]))
+    elif size[1] > 0:
+        return lattice((size[0], size[1]-1))
+
 
 ### OUTPUT - DO NOT TOUCH ###
 result = lattice(size)
